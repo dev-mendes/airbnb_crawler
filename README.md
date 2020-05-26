@@ -33,7 +33,7 @@ Restaurants are searched by city and state.
     $ scrapy crawl restaurants -a city="Denver, CO"
     $ scrapy crawl restaurants -a city="New York, NY"
 
-2. The crawler accepts the additional parameter "category", which can be: "cafes", "bakeries", "grocery-stores", "restaurants"(default)
+2. The crawler accepts the additional parameter "category", which can be: "cafes", "bakeries", "grocery-stores", "restaurants"(default)::
 
     $ cd airbnb-project
     $ scrapy crawl restaurants -a city="Denver, CO" -a category="cafes"
