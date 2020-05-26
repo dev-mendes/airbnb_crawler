@@ -27,14 +27,14 @@ Usage
 -----
 
 
-Restaurants are searched by city and state.
+Restaurants are searched by city and state
 
-Run the crawler:
+Run the crawler
     >>> cd airbnb-project
     >>> scrapy crawl restaurants -a city="Denver, CO"
     >>> scrapy crawl restaurants -a city="New York, NY"
 
-The crawler accepts the additional parameter "category", which can be: "cafes", "bakeries", "grocery-stores", "restaurants".
+The crawler accepts the additional parameter "category", which can be: "cafes", "bakeries", "grocery-stores", "restaurants"
 
     >>> cd airbnb-project
     >>> scrapy crawl restaurants -a city="Denver, CO" -a category="cafes"
