@@ -1,17 +1,17 @@
 # airbnb_crawler
+Airbnb Restaurants Crawler
+
 Features
 --------
 
-* Distributed crawling/scraping
+* PostgreSQL
 
-    You can start multiple spider instances that share a single redis queue.
-    Best suitable for broad multi-domain crawls.
+    Store scraped data directly in your PostgreSql database.
 
-* Distributed post-processing
+* ImagesPipeline
 
-    Scraped items gets pushed into a redis queued meaning that you can start as
-    many as needed post-processing processes sharing the items queue.
+    Download all images of the restaurants.
 
-* Scrapy plug-and-play components
+* User-Agent Rotator Middleware
   
-    Scheduler + Duplication Filter, Item Pipeline, Base Spiders.
+    Prevents your ip from being blocked by sending random "User-Agent".
