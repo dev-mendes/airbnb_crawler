@@ -25,6 +25,7 @@ Requirements
 
 Usage
 -----
+.. note::
 Restaurants are searched by city and state.
 
 1. Run the crawler::
