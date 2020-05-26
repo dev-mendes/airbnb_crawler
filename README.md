@@ -25,18 +25,17 @@ Requirements
 
 Usage
 -----
-.. note::
+
+
 Restaurants are searched by city and state.
 
-1. Run the crawler::
+Run the crawler:
+    >>> cd airbnb-project
+    >>> scrapy crawl restaurants -a city="Denver, CO"
+    >>> scrapy crawl restaurants -a city="New York, NY"
 
-    $ cd airbnb-project
-    $ scrapy crawl restaurants -a city="Denver, CO"
-    $ scrapy crawl restaurants -a city="New York, NY"
-    ^C
+The crawler accepts the additional parameter "category", which can be: "cafes", "bakeries", "grocery-stores", "restaurants".
 
-2. The crawler accepts the additional parameter "category", which can be: "cafes", "bakeries", "grocery-stores", "restaurants"(default)::
-
-    $ cd airbnb-project
-    $ scrapy crawl restaurants -a city="Denver, CO" -a category="cafes"
-    $ scrapy crawl restaurants -a city="New York, NY" -a category="bakeries"
+    >>> cd airbnb-project
+    >>> scrapy crawl restaurants -a city="Denver, CO" -a category="cafes"
+    >>> scrapy crawl restaurants -a city="New York, NY" -a category="bakeries"
