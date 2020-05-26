@@ -30,6 +30,7 @@ Usage
 Restaurants are searched by city and state
 
 Run the crawler
+
     >>> cd airbnb-project
     >>> scrapy crawl restaurants -a city="Denver, CO"
     >>> scrapy crawl restaurants -a city="New York, NY"
