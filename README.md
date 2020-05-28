@@ -40,3 +40,35 @@ The crawler accepts the additional parameter "category", which can be: "cafes", 
     >>> cd airbnb-project
     >>> scrapy crawl restaurants -a city="Denver, CO" -a category="cafes"
     >>> scrapy crawl restaurants -a city="New York, NY" -a category="bakeries"
+    
+
+Settings
+-----
+
+PostreSQLPipeline and PhotoPipeline
+
+    >>> ITEM_PIPELINES = {
+                            'airbnb.pipelines.PostgresPipeline': None, #Set 300 to enable
+                            'airbnb.pipelines.PhotoPipeline': None  #Set 200 to enable
+                            }
+
+
+Postgres Settings
+
+    >>>    PG_HOST = "localhost"
+    >>>    PG_PORT = "5432"
+    >>>    PG_USER = "db-user"
+    >>>    PG_PASS = "db-pass"
+    >>>    PG_DBNAME = "db-name"
+    >>>    PG_TABLE = "db-table"
+
+PhotoPipeline
+
+    >>>    IMAGES_STORE = 'path to store images'
+    
+Random user-agent MIDDLEWARES
+    
+    >>>    DOWNLOADER_MIDDLEWARES = {
+	                                    "scrapy.downloadermiddlewares.useragent.UserAgentMiddlewares": None,
+	                                    "airbnb.middlewares.UserAgentRotatorMiddlewares": 400
+                                    }
